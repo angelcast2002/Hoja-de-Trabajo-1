@@ -115,7 +115,7 @@ public class Acciones implements Radio {
         this.EmisorasGuardadas = EmisorasGuardadas;
     }
 
-
+    // comprueba el estado de la radio y lo cambia
     public void encenderApagar(){
 
         if (Estado == false) {
@@ -130,7 +130,7 @@ public class Acciones implements Radio {
 
     }
 
-
+    // comprueba si la radio se encuentra encendida o apagada para mostrar el valor correspondiente
     public boolean comprobarEncendido(){
 
         if (Estado == false) {
@@ -146,7 +146,7 @@ public class Acciones implements Radio {
         return Mensajeb;
     }
 
-
+    // Guarda la emisora sintonizada en el boton que el usuario elija, tambien comprueba que el numero del boton este en el rango permitido
     public String guardarEmisoraActual(int numBoton){
 
         if (0 < numBoton && numBoton < 13) {
@@ -174,6 +174,7 @@ public class Acciones implements Radio {
         return Mensaje;
     }
 
+    // Selecciona un boton de los antes guardados, tambien revisa que el numero del boton seleccionado este en el rango
     public String seleccionarEmisoraGuardad(int numBoton){
 
         if (0 < numBoton && numBoton < 13) {
@@ -204,7 +205,7 @@ public class Acciones implements Radio {
         return Mensaje;
     }
 
-
+    // Cambia la senal de am a fm
     public String cambiarSenal(boolean opcion){
 
         TipoSenal = opcion;
@@ -222,6 +223,7 @@ public class Acciones implements Radio {
         return Mensaje;
     }
 
+    // Obtiene el tipo de senal que se esta sintonizando
     public boolean getTipoSenal(){
 
         Mensajeb = TipoSenal;
@@ -229,6 +231,7 @@ public class Acciones implements Radio {
 
     }
 
+    // Cambia la emisora, comprueba el tipo de senal y asi hace el cambio
     public void subirEmisora(){
 
         if (TipoSenal == false) {
@@ -261,7 +264,7 @@ public class Acciones implements Radio {
         }
     }
 
-
+    //Cambia la emisora, comprueba el tipo de senal y asi hace el cambio
     public void bajarEmisora(){
 
         if (TipoSenal == false) {
@@ -294,6 +297,7 @@ public class Acciones implements Radio {
         }
     }
 
+    // Muestra la emisora actual
     public float getEmisoraActual(){
         
         if (TipoSenal == false) {
