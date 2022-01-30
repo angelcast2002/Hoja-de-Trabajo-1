@@ -2,6 +2,21 @@ import java.util.ArrayList;
 
 public class Acciones implements Radio {
 
+    public Acciones() {
+        EmisorasGuardadas.add("am, 106.5");
+        EmisorasGuardadas.add("am, 106.5");
+        EmisorasGuardadas.add("am, 106.5");
+        EmisorasGuardadas.add("am, 106.5");
+        EmisorasGuardadas.add("am, 106.5");
+        EmisorasGuardadas.add("am, 106.5");
+        EmisorasGuardadas.add("am, 106.5");
+        EmisorasGuardadas.add("am, 106.5");
+        EmisorasGuardadas.add("am, 106.5");
+        EmisorasGuardadas.add("am, 106.5");
+        EmisorasGuardadas.add("am, 106.5");
+        EmisorasGuardadas.add("am, 106.5");
+
+    }
 
     private boolean Estado = false;
     // determina el estado de la radio, true o false
@@ -31,7 +46,6 @@ public class Acciones implements Radio {
     public void setDentroDelBotton(String[] DentroDelBotton) {
         this.DentroDelBotton = DentroDelBotton;
     }
-    
 
     private boolean Mensajeb;
     private String Mensaje;
@@ -71,7 +85,6 @@ public class Acciones implements Radio {
     public void setMensajeb(boolean Mensajeb) {
         this.Mensajeb = Mensajeb;
     }
-    
 
     public boolean isEstado() {
         return this.Estado;
@@ -80,7 +93,6 @@ public class Acciones implements Radio {
     public void setEstado(boolean Estado) {
         this.Estado = Estado;
     }
-    
 
     public boolean isTipoSenal() {
         return this.TipoSenal;
@@ -89,7 +101,6 @@ public class Acciones implements Radio {
     public void setTipoSenal(boolean TipoSenal) {
         this.TipoSenal = TipoSenal;
     }
-    
 
     public float getAmActual() {
         return this.AmActual;
@@ -106,7 +117,7 @@ public class Acciones implements Radio {
     public void setFmActual(float FmActual) {
         this.FmActual = FmActual;
     }
-    
+
     public ArrayList<String> getEmisorasGuardadas() {
         return this.EmisorasGuardadas;
     }
@@ -116,7 +127,7 @@ public class Acciones implements Radio {
     }
 
     // comprueba el estado de la radio y lo cambia
-    public void encenderApagar(){
+    public void encenderApagar() {
 
         if (Estado == false) {
 
@@ -125,13 +136,14 @@ public class Acciones implements Radio {
         } else {
 
             Estado = false;
-            
+
         }
 
     }
 
-    // comprueba si la radio se encuentra encendida o apagada para mostrar el valor correspondiente
-    public boolean comprobarEncendido(){
+    // comprueba si la radio se encuentra encendida o apagada para mostrar el valor
+    // correspondiente
+    public boolean comprobarEncendido() {
 
         if (Estado == false) {
 
@@ -140,73 +152,71 @@ public class Acciones implements Radio {
         } else {
 
             Mensajeb = false;
-            
+
         }
 
         return Mensajeb;
     }
 
-    // Guarda la emisora sintonizada en el boton que el usuario elija, tambien comprueba que el numero del boton este en el rango permitido
-    public String guardarEmisoraActual(int numBoton){
+    // Guarda la emisora sintonizada en el boton que el usuario elija, tambien
+    // comprueba que el numero del boton este en el rango permitido
+    public String guardarEmisoraActual(int numBoton) {
 
         if (0 < numBoton && numBoton < 13) {
 
             if (TipoSenal == false) {
-            
-                EmisorasGuardadas.set(numBoton, (String.valueOf(TipoSenal)+ "," + Float.toString(FmActual)));
+
+                EmisorasGuardadas.set(numBoton, (String.valueOf(TipoSenal) + "," + Float.toString(FmActual)));
                 Mensaje = "Se ha guardado exitosamente la emisora " + FmActual + " en el boton " + numBoton;
-                
+
             } else {
-    
-                EmisorasGuardadas.set(numBoton, (String.valueOf(TipoSenal)+ "," + Float.toString(AmActual)));
+
+                EmisorasGuardadas.set(numBoton, (String.valueOf(TipoSenal) + "," + Float.toString(AmActual)));
                 Mensaje = "Se ha guardado exitosamente la emisora " + AmActual + " en el boton " + numBoton;
-                
+
             }
-            
+
         } else {
 
             Mensaje = "Numero fuera de rango, elija uno entre 1 y 12";
-            
+
         }
 
-        
-        
         return Mensaje;
     }
 
-    // Selecciona un boton de los antes guardados, tambien revisa que el numero del boton seleccionado este en el rango
-    public String seleccionarEmisoraGuardad(int numBoton){
+    // Selecciona un boton de los antes guardados, tambien revisa que el numero del
+    // boton seleccionado este en el rango
+    public String seleccionarEmisoraGuardad(int numBoton) {
 
         if (0 < numBoton && numBoton < 13) {
 
             ContenidoBotton = getEmisorasGuardadas().get(numBoton);
             DentroDelBotton = ContenidoBotton.split(",");
-            TipoSenal = Boolean.valueOf(DentroDelBotton[1]);
+            TipoSenal = Boolean.valueOf(DentroDelBotton[0]);
 
             if (TipoSenal == false) {
 
-                FmActual = Float.valueOf(DentroDelBotton[2]);
+                FmActual = Float.valueOf(DentroDelBotton[1]);
                 Mensaje = "Escuchando la emisora " + TipoSenal + FmActual + " del boton " + numBoton;
 
             } else {
 
-                AmActual = Float.valueOf(DentroDelBotton[2]);
+                AmActual = Float.valueOf(DentroDelBotton[1]);
                 Mensaje = "Escuchando la emisora " + TipoSenal + AmActual + " del boton " + numBoton;
             }
 
-            
         } else {
 
             Mensaje = "Numero fuera de rango, elija uno entre 1 y 12";
-            
+
         }
 
-        
         return Mensaje;
     }
 
     // Cambia la senal de am a fm
-    public String cambiarSenal(boolean opcion){
+    public String cambiarSenal(boolean opcion) {
 
         TipoSenal = opcion;
 
@@ -217,14 +227,14 @@ public class Acciones implements Radio {
         } else {
 
             Mensaje = "Se ha cambiado exitosamente la emisora a AM";
-            
+
         }
-        
+
         return Mensaje;
     }
 
     // Obtiene el tipo de senal que se esta sintonizando
-    public boolean getTipoSenal(){
+    public boolean getTipoSenal() {
 
         Mensajeb = TipoSenal;
         return Mensajeb;
@@ -232,74 +242,68 @@ public class Acciones implements Radio {
     }
 
     // Cambia la emisora, comprueba el tipo de senal y asi hace el cambio
-    public void subirEmisora(){
+    public void subirEmisora() {
 
         if (TipoSenal == false) {
 
             FmActual = (float) (FmActual + 0.2);
-            
-            if (FmActual <= 107.9) {
 
-                
+            if (FmActual <= 107.9) {
 
             } else {
 
                 FmActual = (float) (87.9);
-                
+
             }
-            
-            
+
         } else {
 
             AmActual = (float) (AmActual + 10);
 
             if (AmActual <= 1610) {
-                
+
             } else {
 
-                AmActual = (float)(530);
-                
+                AmActual = (float) (530);
+
             }
-            
+
         }
     }
 
-    //Cambia la emisora, comprueba el tipo de senal y asi hace el cambio
-    public void bajarEmisora(){
+    // Cambia la emisora, comprueba el tipo de senal y asi hace el cambio
+    public void bajarEmisora() {
 
         if (TipoSenal == false) {
 
             FmActual = (float) (FmActual - 0.2);
-            
-            if (FmActual >= 87.9) {
 
-                
+            if (FmActual >= 87.9) {
 
             } else {
 
                 FmActual = (float) (107.9);
-                
+
             }
-            
-            
+
         } else {
 
             AmActual = (float) (AmActual - 10);
 
             if (AmActual >= 530) {
-                
+
             } else {
 
-                AmActual = (float)(1610);
-                
+                AmActual = (float) (1610);
+
             }
-            
+
         }
     }
 
     // Muestra la emisora actual
-    public float getEmisoraActual(){
-        
+    public float getEmisoraActual() {
+
         if (TipoSenal == false) {
 
             Mensajef = FmActual;
@@ -307,11 +311,11 @@ public class Acciones implements Radio {
         } else {
 
             Mensajef = AmActual;
-            
+
         }
 
         return Mensajef;
 
     }
-    
+
 }
