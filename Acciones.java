@@ -21,7 +21,7 @@ public class Acciones implements Radio {
         this.Mensajef = Mensajef;
     }
 
-    private ArrayList<String> EmisorasGuardadas = new ArrayList();
+    private ArrayList<String> EmisorasGuardadas = new ArrayList<String>();
     private String[] DentroDelBotton;
 
     public String[] getDentroDelBotton() {
