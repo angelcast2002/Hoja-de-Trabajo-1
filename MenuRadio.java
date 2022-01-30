@@ -46,7 +46,7 @@ public class MenuRadio {
                 case 3: // Sube a la siguiente emisora.
                     act.subirEmisora();
                     show("La emisora actual es:");
-                    show(act.getEmisoraAguardar());
+                    show("" + act.getEmisoraActual());
 
                     break;
 
