@@ -142,6 +142,11 @@ public class Acciones implements Radio {
 
     }
 
+    @Override
+    public boolean comprobarEncendido() {
+        return false;
+    }
+
     // comprueba si la radio se encuentra encendida o apagada para mostrar el valor
     // correspondiente
     public boolean comprobarEncendida() {
@@ -190,6 +195,11 @@ public class Acciones implements Radio {
         }
 
         return Mensaje;
+    }
+
+    @Override
+    public String seleccionarEmisoraGuardad(int numBoton) {
+        return null;
     }
 
     // Selecciona un boton de los antes guardados, tambien revisa que el numero del
