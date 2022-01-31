@@ -48,6 +48,7 @@ public class Acciones implements Radio {
     }
 
     private boolean Mensajeb;
+
     private String Mensaje;
 
     private String ContenidoBotton;
@@ -160,6 +161,12 @@ public class Acciones implements Radio {
 
     // Guarda la emisora sintonizada en el boton que el usuario elija, tambien
     // comprueba que el numero del boton este en el rango permitido
+
+    /**
+     *
+     * @param numBoton El botón que el usuario elige para guardar su emisora.
+     * @return regresa un mensaje con la emisora que guardo.
+     */
     public String guardarEmisoraActual(int numBoton) {
 
         if (0 < numBoton && numBoton < 13) {
