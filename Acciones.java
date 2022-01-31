@@ -144,7 +144,7 @@ public class Acciones implements Radio {
 
     // comprueba si la radio se encuentra encendida o apagada para mostrar el valor
     // correspondiente
-    public boolean comprobarEncendido() {
+    public boolean comprobarEncendida() {
 
         if (Estado == false) {
 
@@ -194,7 +194,7 @@ public class Acciones implements Radio {
 
     // Selecciona un boton de los antes guardados, tambien revisa que el numero del
     // boton seleccionado este en el rango
-    public String seleccionarEmisoraGuardad(int numBoton) {
+    public String seleccionarEmisoraGuardada(int numBoton) {
 
         if (0 < numBoton && numBoton < 13) {
 
