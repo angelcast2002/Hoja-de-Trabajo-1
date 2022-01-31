@@ -347,7 +347,6 @@ public class Acciones implements Radio {
     public String cambiarSenal(boolean opcion) {
 
         TipoSenal = opcion;
-
         if (TipoSenal == false) {
 
             Mensaje = "Se ha cambiado exitosamente la emisora a FM";
