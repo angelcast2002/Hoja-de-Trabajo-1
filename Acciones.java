@@ -30,7 +30,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @return float
+     * @return float Mensaje
      */
     public float getMensajef() {
         return this.Mensajef;
@@ -38,7 +38,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @param Mensajef
+     * @param Mensajef Mensaje
      */
     public void setMensajef(float Mensajef) {
         this.Mensajef = Mensajef;
@@ -57,7 +57,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @param DentroDelBotton
+     * @param DentroDelBotton 
      */
     public void setDentroDelBotton(String[] DentroDelBotton) {
         this.DentroDelBotton = DentroDelBotton;
@@ -71,7 +71,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @return String
+     * @return String Información contenida en el boton 
      */
     public String getContenidoBotton() {
         return this.ContenidoBotton;
@@ -79,7 +79,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @param ContenidoBotton
+     * @param ContenidoBotton Información contenida en el boton 
      */
     public void setContenidoBotton(String ContenidoBotton) {
         this.ContenidoBotton = ContenidoBotton;
@@ -87,7 +87,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @return String
+     * @return String 
      */
     public String getMensaje() {
         return this.Mensaje;
@@ -105,7 +105,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @return String
+     * @return String  Emisora que el usuario quiere guardar
      */
     public String getEmisoraAguardar() {
         return this.EmisoraAguardar;
@@ -113,7 +113,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @param EmisoraAguardar
+     * @param EmisoraAguardar Emisora que el usuario quiere guardar
      */
     public void setEmisoraAguardar(String EmisoraAguardar) {
         this.EmisoraAguardar = EmisoraAguardar;
@@ -129,7 +129,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @param Mensajeb
+     * @param Mensajeb 
      */
     public void setMensajeb(boolean Mensajeb) {
         this.Mensajeb = Mensajeb;
@@ -137,7 +137,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @return boolean
+     * @return boolean Encendido o apagado
      */
     public boolean isEstado() {
         return this.Estado;
@@ -145,7 +145,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @param Estado
+     * @param Estado Encendido o Apagado
      */
     public void setEstado(boolean Estado) {
         this.Estado = Estado;
@@ -153,7 +153,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @return boolean
+     * @return boolean Retorna tipo de señal
      */
     public boolean isTipoSenal() {
         return this.TipoSenal;
@@ -161,7 +161,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @param TipoSenal
+     * @param TipoSenal Tipo de señal 
      */
     public void setTipoSenal(boolean TipoSenal) {
         this.TipoSenal = TipoSenal;
@@ -169,7 +169,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @return float
+     * @return float Retorna AM actual
      */
     public float getAmActual() {
         return this.AmActual;
@@ -177,7 +177,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @param AmActual
+     * @param AmActual Emisora AM actual
      */
     public void setAmActual(float AmActual) {
         this.AmActual = AmActual;
@@ -185,7 +185,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @return float
+     * @return float Retorna FM actual
      */
     public float getFmActual() {
         return this.FmActual;
@@ -193,7 +193,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @param FmActual
+     * @param FmActual Emisora FM actual
      */
     public void setFmActual(float FmActual) {
         this.FmActual = FmActual;
@@ -201,7 +201,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @return ArrayList<String>
+     * @return ArrayList<String> Emisoras guardadas
      */
     public ArrayList<String> getEmisorasGuardadas() {
         return this.EmisorasGuardadas;
@@ -209,7 +209,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @param EmisorasGuardadas
+     * @param EmisorasGuardadas Lista de emisoras guardadas
      */
     public void setEmisorasGuardadas(ArrayList<String> EmisorasGuardadas) {
         this.EmisorasGuardadas = EmisorasGuardadas;
@@ -241,7 +241,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @return boolean
+     * @return boolean Emisora encendida o apagada
      */
     // comprueba si la radio se encuentra encendida o apagada para mostrar el valor
     // correspondiente
@@ -295,8 +295,8 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @param numBoton
-     * @return String
+     * @param numBoton El botón que el usuario elige para guardar su emisora.
+     * @return String 
      */
     @Override
     public String seleccionarEmisoraGuardad(int numBoton) {
@@ -305,7 +305,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @param numBoton
+     * @param numBoton El botón que el usuario elige para guardar su emisora.
      * @return String
      */
     // Selecciona un boton de los antes guardados, tambien revisa que el numero del
@@ -340,8 +340,8 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @param opcion
-     * @return String
+     * @param opcion Opcion AM o FM
+     * @return String Retorna si se a cambiado la emisora a AM o FM
      */
     // Cambia la senal de am a fm
     public String cambiarSenal(boolean opcion) {
@@ -363,7 +363,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @return boolean
+     * @return Mesnajeb Retorna el tipo de señal
      */
     // Obtiene el tipo de senal que se esta sintonizando
     public boolean getTipoSenal() {
@@ -435,7 +435,7 @@ public class Acciones implements Radio {
 
     
     /** 
-     * @return float
+     * @return float Retorna la emisora actual
      */
     // Muestra la emisora actual
     public float getEmisoraActual() {
