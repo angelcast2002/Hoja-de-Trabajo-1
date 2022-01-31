@@ -3,18 +3,18 @@ import java.util.ArrayList;
 public class Acciones implements Radio {
 
     public Acciones() {
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
 
     }
 
@@ -24,8 +24,8 @@ public class Acciones implements Radio {
     private boolean TipoSenal = false;
     // determina si es am (true) o fm (false)
 
-    private float AmActual;
-    private float FmActual;
+    private float AmActual = 540;
+    private float FmActual = 90;
     private float Mensajef;
 
     public float getMensajef() {
