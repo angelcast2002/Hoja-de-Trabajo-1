@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class MenuRadio {
     Acciones act = new Acciones();
     Scanner scan = new Scanner(System.in);
-    //Contructor de clase
+
     public void menu() {
         boolean salir = false;
         while (salir != true) {

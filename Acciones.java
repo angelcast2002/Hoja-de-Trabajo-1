@@ -2,20 +2,19 @@ import java.util.ArrayList;
 
 public class Acciones implements Radio {
 
-    //Contructor de clase
     public Acciones() {
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
-        EmisorasGuardadas.add("am, 106.5");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
+        EmisorasGuardadas.add("am, 540");
 
     }
 
@@ -25,22 +24,14 @@ public class Acciones implements Radio {
     private boolean TipoSenal = false;
     // determina si es am (true) o fm (false)
 
-    private float AmActual;
-    private float FmActual;
+    private float AmActual = 540;
+    private float FmActual = 90;
     private float Mensajef;
 
-    
-    /** 
-     * @return float
-     */
     public float getMensajef() {
         return this.Mensajef;
     }
 
-    
-    /** 
-     * @param Mensajef
-     */
     public void setMensajef(float Mensajef) {
         this.Mensajef = Mensajef;
     }
@@ -48,18 +39,10 @@ public class Acciones implements Radio {
     private ArrayList<String> EmisorasGuardadas = new ArrayList<String>();
     private String[] DentroDelBotton;
 
-    
-    /** 
-     * @return String[]
-     */
     public String[] getDentroDelBotton() {
         return this.DentroDelBotton;
     }
 
-    
-    /** 
-     * @param DentroDelBotton
-     */
     public void setDentroDelBotton(String[] DentroDelBotton) {
         this.DentroDelBotton = DentroDelBotton;
     }
@@ -70,148 +53,76 @@ public class Acciones implements Radio {
 
     private String ContenidoBotton;
 
-    
-    /** 
-     * @return String
-     */
     public String getContenidoBotton() {
         return this.ContenidoBotton;
     }
 
-    
-    /** 
-     * @param ContenidoBotton
-     */
     public void setContenidoBotton(String ContenidoBotton) {
         this.ContenidoBotton = ContenidoBotton;
     }
 
-    
-    /** 
-     * @return String
-     */
     public String getMensaje() {
         return this.Mensaje;
     }
 
-    
-    /** 
-     * @param Mensaje
-     */
     public void setMensaje(String Mensaje) {
         this.Mensaje = Mensaje;
     }
 
     private String EmisoraAguardar;
 
-    
-    /** 
-     * @return String
-     */
     public String getEmisoraAguardar() {
         return this.EmisoraAguardar;
     }
 
-    
-    /** 
-     * @param EmisoraAguardar
-     */
     public void setEmisoraAguardar(String EmisoraAguardar) {
         this.EmisoraAguardar = EmisoraAguardar;
     }
 
-    
-    /** 
-     * @return boolean
-     */
     public boolean isMensajeb() {
         return this.Mensajeb;
     }
 
-    
-    /** 
-     * @param Mensajeb
-     */
     public void setMensajeb(boolean Mensajeb) {
         this.Mensajeb = Mensajeb;
     }
 
-    
-    /** 
-     * @return boolean
-     */
     public boolean isEstado() {
         return this.Estado;
     }
 
-    
-    /** 
-     * @param Estado
-     */
     public void setEstado(boolean Estado) {
         this.Estado = Estado;
     }
 
-    
-    /** 
-     * @return boolean
-     */
     public boolean isTipoSenal() {
         return this.TipoSenal;
     }
 
-    
-    /** 
-     * @param TipoSenal
-     */
     public void setTipoSenal(boolean TipoSenal) {
         this.TipoSenal = TipoSenal;
     }
 
-    
-    /** 
-     * @return float
-     */
     public float getAmActual() {
         return this.AmActual;
     }
 
-    
-    /** 
-     * @param AmActual
-     */
     public void setAmActual(float AmActual) {
         this.AmActual = AmActual;
     }
 
-    
-    /** 
-     * @return float
-     */
     public float getFmActual() {
         return this.FmActual;
     }
 
-    
-    /** 
-     * @param FmActual
-     */
     public void setFmActual(float FmActual) {
         this.FmActual = FmActual;
     }
 
-    
-    /** 
-     * @return ArrayList<String>
-     */
     public ArrayList<String> getEmisorasGuardadas() {
         return this.EmisorasGuardadas;
     }
 
-    
-    /** 
-     * @param EmisorasGuardadas
-     */
     public void setEmisorasGuardadas(ArrayList<String> EmisorasGuardadas) {
         this.EmisorasGuardadas = EmisorasGuardadas;
     }
@@ -231,13 +142,14 @@ public class Acciones implements Radio {
 
     }
 
-    
-    /** 
-     * @return boolean
-     */
+    @Override
+    public boolean comprobarEncendido() {
+        return false;
+    }
+
     // comprueba si la radio se encuentra encendida o apagada para mostrar el valor
     // correspondiente
-    public boolean comprobarEncendido() {
+    public boolean comprobarEncendida() {
 
         if (Estado == false) {
 
@@ -285,14 +197,14 @@ public class Acciones implements Radio {
         return Mensaje;
     }
 
-    
-    /** 
-     * @param numBoton
-     * @return String
-     */
+    @Override
+    public String seleccionarEmisoraGuardad(int numBoton) {
+        return null;
+    }
+
     // Selecciona un boton de los antes guardados, tambien revisa que el numero del
     // boton seleccionado este en el rango
-    public String seleccionarEmisoraGuardad(int numBoton) {
+    public String seleccionarEmisoraGuardada(int numBoton) {
 
         if (0 < numBoton && numBoton < 13) {
 
@@ -320,11 +232,6 @@ public class Acciones implements Radio {
         return Mensaje;
     }
 
-    
-    /** 
-     * @param opcion
-     * @return String
-     */
     // Cambia la senal de am a fm
     public String cambiarSenal(boolean opcion) {
 
@@ -343,10 +250,6 @@ public class Acciones implements Radio {
         return Mensaje;
     }
 
-    
-    /** 
-     * @return boolean
-     */
     // Obtiene el tipo de senal que se esta sintonizando
     public boolean getTipoSenal() {
 
@@ -415,10 +318,6 @@ public class Acciones implements Radio {
         }
     }
 
-    
-    /** 
-     * @return float
-     */
     // Muestra la emisora actual
     public float getEmisoraActual() {
 
